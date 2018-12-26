@@ -35,10 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/lyFrag"
             android:background="?android:attr/colorButtonNormal" android:gravity="center">
-        <TextView
-                android:text="FRAGMENTO A REEMPLAZAR SIEMPRE"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView2"/>
     </LinearLayout>
 
 </LinearLayout>

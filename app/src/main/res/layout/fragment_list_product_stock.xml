@@ -4,32 +4,27 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/lyProductStock">
 
-    <LinearLayout
-            android:orientation="vertical"
+    <TextView
+            android:text="Stock"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10" android:hint="Nombre del producto" android:id="@+id/titleNombre"
-                android:text="@string/titleNombre"/>
-        <TextView
-                android:text="Producto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/lblNameProduct"/>
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10" android:hint="stock" android:id="@+id/titleStock" android:text="@string/titleStock"/>
-        <TextView
-                android:text="Stock"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/lblStock"/>
-        <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="?android:attr/listDivider"
-                android:visibility="visible" android:layout_weight="1"/>
-    </LinearLayout>
+            android:layout_height="wrap_content" android:id="@+id/lblStock"/>
+    <TextView
+            android:text="Producto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lblNameProduct"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" android:hint="Nombre del producto" android:id="@+id/titleNombre"
+            android:text="@string/titleNombre"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" android:hint="stock" android:id="@+id/titleStock" android:text="@string/titleStock"/>
+    <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible" android:layout_weight="1"/>
 </LinearLayout>

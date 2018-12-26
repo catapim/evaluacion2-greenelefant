@@ -15,8 +15,6 @@ class ListProductsAdapter:RecyclerView.Adapter<CustomViewHolder> (){
         Product(4, "Lomo Argentino", 28,6500,"carnes"),
         Product(5,"Leche Descremada", 4,900,"lacteos"))
 
-
-
     override fun onCreateViewHolder(parentGroup: ViewGroup, viewType: Int): CustomViewHolder {
         //cuando creamos la vista
         //inflamos el elemento
@@ -34,10 +32,7 @@ class ListProductsAdapter:RecyclerView.Adapter<CustomViewHolder> (){
         val row = rowsOfLayoutProducts.get(position)
         holder?.itemView?.lblNameProduct?.text =  row.name
         holder?.itemView?.lblStock?.text =  row.stock.toString()
-
     }
-
-
 }
 
 class CustomViewHolder(v:View): RecyclerView.ViewHolder(v){

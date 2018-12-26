@@ -22,22 +22,18 @@ import kotlinx.android.synthetic.main.fragment_list_products.view.*
  */
 class ListProductsFragment : Fragment() {
 
-    var myContext:Context?=null
+    var miContexto:Context?=null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view:View = inflater.inflate(R.layout.fragment_list_products, container, false)
+        val view : View = inflater.inflate(R.layout.fragment_list_products, container, false)
         val activity = activity
-        val recyclerView = view.findViewById<RecyclerView>(R.id.rclyListProducts) as RecyclerView
+        val recyclerView = view.findViewById(R.id.rclyListProducts) as RecyclerView
         recyclerView.layoutManager = GridLayoutManager(activity,2)
         recyclerView.adapter = ListProductsAdapter()
         return view
     }
-
-
-
-
 }
