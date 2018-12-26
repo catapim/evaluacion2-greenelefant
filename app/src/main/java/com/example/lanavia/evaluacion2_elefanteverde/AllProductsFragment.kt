@@ -10,11 +10,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 
 
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class AllProductsFragment : Fragment() {
 
     var miContext:Context?=null
@@ -28,6 +23,4 @@ class AllProductsFragment : Fragment() {
      //   Toast.makeText(miContext,"Fragmento allProducts",Toast.LENGTH_SHORT).show()
         return view
     }
-
-
 }

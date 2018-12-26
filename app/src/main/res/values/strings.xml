@@ -6,8 +6,10 @@
     <string name="btnagregar">Agregar</string>
     <string name="txttituloapp">App de mantención de productos</string>
     <string name="txtusuario">Hola! Qué necesitas? Elige una opción:</string>
-    <string name="AllProductsTitlet">desde fragment all products</string>
-    <string name="AllProductsTitlet">desde fragment all products</string>
+    <string name="titleNombre">Nombre del producto</string>
+    <string name="titleStock">Stock disponible</string>
+
+
 
 
 </resources>

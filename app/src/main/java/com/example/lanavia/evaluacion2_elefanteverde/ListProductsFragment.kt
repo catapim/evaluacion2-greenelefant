@@ -28,17 +28,12 @@ class ListProductsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout for this fragment
         val view:View = inflater.inflate(R.layout.fragment_list_products, container, false)
         val activity = activity
         val recyclerView = view.findViewById<RecyclerView>(R.id.rclyListProducts) as RecyclerView
         recyclerView.layoutManager = GridLayoutManager(activity,2)
         recyclerView.adapter = ListProductsAdapter()
-
-
-
-
         return view
     }
 

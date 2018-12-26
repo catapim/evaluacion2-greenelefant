@@ -10,7 +10,7 @@
     <TextView
             android:text="@string/txttituloapp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/textView" android:textAlignment="center"
+            android:layout_height="match_parent" android:textAlignment="center"
             android:textSize="18sp"/>
     <TextView
             android:layout_width="match_parent"
@@ -20,7 +20,7 @@
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_weight="1">
+            android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/lyBotones">
         <Button
                 android:text="@string/btnlistar"
                 android:layout_width="wrap_content"
@@ -30,17 +30,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/btnAddProduct" android:layout_weight="1"/>
     </LinearLayout>
-    <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-    />
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_weight="1" android:id="@+id/lyFrag"
-            android:background="?android:attr/colorButtonNormal">
+            android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/lyFrag"
+            android:background="?android:attr/colorButtonNormal" android:gravity="center">
+        <TextView
+                android:text="FRAGMENTO A REEMPLAZAR SIEMPRE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView2"/>
     </LinearLayout>
 
 </LinearLayout>
