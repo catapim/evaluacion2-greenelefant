@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import kotlinx.android.synthetic.main.fragment_frag_registro.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -37,6 +39,8 @@ class frag_registro : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+
     }
 
     override fun onCreateView(
@@ -45,10 +49,20 @@ class frag_registro : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v : View = inflater.inflate(R.layout.fragment_frag_registro, container, false)
+
+
+      //  var txtStock : Int = editStock.toString().toInt()
+        var txtCategoria : String = editCategoria.text.toString()
+        var txtNombre = editNombre.text.toString()
+
+        btnGuardar.setOnClickListener{
+            var customSQL = CustomSQL(this.miContexto!!, "ProductosSuper", null,1)
+          //  customSQL.insertar(txtNombre,txtStock,txtCategoria)
+        }
         return v
+
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
@@ -79,7 +93,6 @@ class frag_registro : Fragment() {
      * for more information.
      */
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         fun onFragmentInteraction(uri: Uri)
     }
 
@@ -92,7 +105,6 @@ class frag_registro : Fragment() {
          * @param param2 Parameter 2.
          * @return A new instance of fragment frag_registro.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             frag_registro().apply {

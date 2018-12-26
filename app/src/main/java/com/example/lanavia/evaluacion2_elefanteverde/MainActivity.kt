@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var customSQL = CustomSQL(this, "ProductosSuper", null,1)
+
         btnListProduct.setOnClickListener {
             val fm = supportFragmentManager
             val ft = fm.beginTransaction()
@@ -28,5 +30,7 @@ class MainActivity : AppCompatActivity() {
             ft.replace(R.id.lyFrag,frag_registro())
             ft.commit()
         }
+
+
     }
 }

@@ -18,34 +18,20 @@
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="ID"
                 android:ems="10"
-                android:id="@+id/editID"/>
-        <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/spCategoria"/>
+                android:id="@+id/editStock" android:hint="cantidad" android:inputType="number"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Nombre"
                 android:ems="10"
-                android:id="@+id/editNombre"/>
+                android:id="@+id/editCategoria" android:hint="categoria"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Ingresa valor en CLP sin IVA"
                 android:ems="10"
-                android:id="@+id/editPrecioClp"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Stock"
-                android:ems="10"
-                android:id="@+id/editStock"/>
+                android:id="@+id/editNombre" android:hint="@string/titleNombre"/>
         <TextView
                 android:text="Precio en Dolar"
                 android:layout_width="match_parent"
