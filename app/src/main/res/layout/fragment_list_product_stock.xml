@@ -5,22 +5,23 @@
               android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/lyProductStock">
 
     <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" android:hint="stock" android:id="@+id/titleStock" android:text="@string/titleStock"
+            android:textStyle="bold|italic" android:padding="5dp"/>
+    <TextView
             android:text="Stock"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/lblStock"/>
-    <TextView
-            android:text="Producto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/lblNameProduct"/>
+            android:layout_height="wrap_content" android:id="@+id/lblStock" android:padding="5dp"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10" android:hint="Nombre del producto" android:id="@+id/titleNombre"
-            android:text="@string/titleNombre"/>
+            android:text="@string/titleNombre" android:textStyle="bold|italic" android:padding="5dp"/>
     <TextView
+            android:text="Producto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10" android:hint="stock" android:id="@+id/titleStock" android:text="@string/titleStock"/>
+            android:layout_height="wrap_content" android:id="@+id/lblNameProduct" android:padding="5dp"/>
     <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
