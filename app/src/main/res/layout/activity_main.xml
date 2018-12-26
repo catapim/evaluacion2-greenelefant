@@ -8,24 +8,25 @@
         tools:context=".MainActivity" android:orientation="vertical">
 
     <TextView
-            android:text="Mantención de Productos"
+            android:text="@string/txttituloapp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/textView"/>
+            android:layout_height="match_parent" android:id="@+id/textView" android:textAlignment="center"
+            android:textSize="18sp"/>
     <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hola usuario! ¿que necesitas?"
-    />
+            android:text="@string/txtusuario"
+            android:textAlignment="center"/>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_weight="1">
         <Button
-                android:text="Listar"
+                android:text="@string/btnlistar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/btnListProduct" android:layout_weight="1"/>
         <Button
-                android:text="Agregar"
+                android:text="@string/btnagregar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/btnAddProduct" android:layout_weight="1"/>
     </LinearLayout>
