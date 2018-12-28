@@ -1,3 +1,4 @@
+/*
 package com.example.lanavia.evaluacion2_elefanteverde
 
 
@@ -19,10 +20,12 @@ import kotlinx.android.synthetic.main.fragment_list_products.*
 import kotlinx.android.synthetic.main.fragment_list_products.view.*
 
 
+*/
 /**
  * Fragmento utilizado para listar los productos
  *
- */
+ *//*
+
 class ListProductsFragment : Fragment() {
 
     var miContexto:Context?=null
@@ -43,8 +46,8 @@ class ListProductsFragment : Fragment() {
 
     }
 
-    class CustomAdapter(val miContext: Context, val recurso: Int, val lista: ArrayList<Product>) :
-        ArrayAdapter<Product>(miContext, recurso, lista) {
+    class CustomAdapter(val miContext: Context, val recurso: Int, val lista: ArrayList<Producto>) :
+        ArrayAdapter<Producto>(miContext, recurso, lista) {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
 
@@ -64,4 +67,4 @@ class ListProductsFragment : Fragment() {
         }
 
     }
-}
+}*/

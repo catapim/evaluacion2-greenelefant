@@ -13,52 +13,50 @@ class CustomSQL (val miContexto: Context,
                  var version : Int) : SQLiteOpenHelper(miContexto, nombreDb,factory,version) {
 
     override fun onCreate(db: SQLiteDatabase?) {
-        var query = "CREATE TABLE ProductosSuper(id INTEGER PRIMARY KEY AUTOINCREMENT, Nombre TEXT, Cantidad TEXT, Categoria TEXT)"
+        var query = "CREATE TABLE ProductosSuper(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, cantidad TEXT, categoria TEXT, precio INTEGER, precioUSD DOUBLE)"
         db?.execSQL(query)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
     }
 
-    fun insertar (name: String, stock: String, normalPrice: Int?, category: String) {
+    fun insertar (nombre: String, cantidad:String, categoria: String, precio: Int, precioUSD: Double?) {
         try {
             val db = this.writableDatabase
             var cv = ContentValues()
-            cv.put("name", name)
-            cv.put("stock", stock)
-            cv.put("normalPrice", normalPrice)
-            cv.put("category", category)
+            cv.put("nombre", nombre)
+            cv.put("cantidad", cantidad)
+            cv.put("categoria", categoria)
+            cv.put("precio", precio)
+            cv.put("precioUSD", precioUSD)
             val resultado = db.insert("ProductosSuper", null, cv)
             db.close()
-            if (resultado == 1L) {
-                System.out.println("mensaje no agregado")
+            if (resultado == -1L) {
                 Toast.makeText(miContexto, "Productos no agregados", Toast.LENGTH_SHORT).show()
             }
             else {
-                System.out.println("mensaje agregado")
                 Toast.makeText(miContexto, "Productos agregados", Toast.LENGTH_SHORT).show()
-
             }
         } catch (e: SQLException)
         {
-            System.out.println("Error al insertar producto en la DB")
             Toast.makeText(miContexto, "Error al insertar. Revise log.", Toast.LENGTH_LONG).show()
         }
     }
 
-    fun getProductos (): ArrayList<Product> {
+    fun getProductos (): ArrayList<Producto> {
         val db = this.writableDatabase
-        var arrayProductos = ArrayList<Product>()
+        var arrayProductos = ArrayList<Producto>()
         val query = "SELECT * FROM ProductosSuper"
         val cursor = db.rawQuery(query, null)
         if (cursor.moveToFirst()) {
             do {
                 var id = cursor.getInt(0)
-                var name= cursor.getString(1)
-                var stock = cursor.getInt(2)
-                var normalPrice = cursor.getInt(3)
-                var category = cursor.getString(4)
-                arrayProductos.add(Product(id,name,stock,normalPrice,category))
+                var nombre= cursor.getString(1)
+                var cantidad = cursor.getInt(2)
+                var categoria = cursor.getString(3)
+                var precio = cursor.getInt(4)
+                var precioUSD = cursor.getDouble(5)
+                arrayProductos.add(Producto(id,nombre,cantidad,categoria,precio,precioUSD))
             } while (cursor.moveToNext())
         }
         return arrayProductos

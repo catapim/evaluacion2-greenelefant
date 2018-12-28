@@ -19,19 +19,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/editStock" android:hint="cantidad" android:inputType="number"/>
+                android:id="@+id/editNombre" android:inputType="number" android:hint="@string/titleNombre"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editCantidad" android:hint="cantidad" android:inputType="number"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editCategoria" android:hint="categoria" android:inputType="number"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editCategoria" android:hint="categoria"/>
-        <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/editNombre" android:hint="@string/titleNombre"/>
+                android:id="@+id/editPrecioNormal" android:hint="precionormal"/>
         <TextView
                 android:text="Precio en Dolar"
                 android:layout_width="match_parent"
