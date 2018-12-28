@@ -11,10 +11,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:gravity="center" android:layout_margin="10dp">
         <TextView
-                android:text="Registra tu producto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/txtRegistro" android:textSize="24sp"
-                android:textAlignment="center"/>
+                android:textAlignment="center" android:text="@string/txtregistro"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -36,9 +35,9 @@
                 android:ems="10"
                 android:id="@+id/editPrecioNormal" android:hint="@string/txtprecio" android:inputType="number"/>
         <Button
-                android:text="Guardar producto"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/btnGuardar" android:layout_margin="15dp"/>
+                android:layout_height="wrap_content" android:id="@+id/btnGuardar" android:layout_margin="15dp"
+                android:text="@string/txtbotonguardar"/>
     </LinearLayout>
 
 </FrameLayout>

@@ -9,6 +9,24 @@
     <string name="txtcantidad">Ingresa el stock</string>
     <string name="txtprecio">Ingresa el precio sin IVA</string>
 
+    <string name="txtregistro">Registra tu producto aquí</string>
+
+    <string name="txtbotonguardar">Guardar producto</string>
+
+    <string name="txtcategoriaview">Guardar producto</string>
+
+    <string name="txtpdolar">Precio en USD</string>
+    <string name="txtpiva">Precio en IVA</string>
+    <string name="txtpsiniva">Precio sin IVA</string>
+
+
+
+    <string name="placeholder">este txt sera reemplazado por algo hermoso</string>
+
+
+
+
+
 
 
 

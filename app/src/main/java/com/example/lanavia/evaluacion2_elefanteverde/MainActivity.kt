@@ -9,7 +9,6 @@ import java.io.IOException
 import com.google.gson.GsonBuilder
 import okhttp3.*
 
-
 class MainActivity : AppCompatActivity() {
 
 

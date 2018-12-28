@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import kotlinx.android.synthetic.main.fragment_frag_registro.*
 
 
 private const val ARG_PARAM1 = "param1"
@@ -45,15 +46,19 @@ class Fragmento_Registro (var valorDolar: Double) : Fragment() {
 
                if (nombre.length == 0 || cantidad.length == 0 || categoria.length == 0 || precionormal.length == 0) {
 
-                   Toast.makeText(miContexto, "Plz que no quede ningun campo en blanco", Toast.LENGTH_LONG).show()
+                   Toast.makeText(miContexto, "Debes llenar todos los campos para registrar un producto /o/", Toast.LENGTH_LONG).show()
                } else {
                    customSQL.insertar(nombre, cantidad, categoria, precionormal.toInt(), precioIVA, precioUSD)
                }
            } catch (e: Exception) {
-               Toast.makeText(miContexto, "Plz que no quede ningun campo en blanco", Toast.LENGTH_LONG).show()
+               Toast.makeText(miContexto, "No dejes campos en blanco >.<", Toast.LENGTH_LONG).show()
                e.printStackTrace();
            }
 
+            editNombre.text.clear()
+            editCantidad.text.clear()
+            editCategoria.text.clear()
+            editPrecioNormal.text.clear()
         }
         return v
     }

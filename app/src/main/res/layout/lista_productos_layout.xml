@@ -10,61 +10,60 @@
             android:layout_height="wrap_content" android:id="@+id/textView7" android:textSize="18sp"
             android:padding="0dp" android:textAlignment="center"/>
     <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/lblnombre" android:textSize="18sp"
             android:textStyle="bold" android:padding="0dp"
-            android:textAlignment="center"/>
+            android:textAlignment="center" android:text="@string/placeholder"/>
     <TextView
             android:text="@string/titleStock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:textSize="18sp"
             android:padding="0dp" android:textAlignment="center"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/placeholder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/lblcantidad" android:textSize="18sp"
             android:textStyle="bold" android:padding="0dp"
             android:textAlignment="center"/>
     <TextView
-            android:text="Categoría"
+            android:text="@string/txtcategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView9" android:textSize="18sp"
             android:padding="0dp" android:textAlignment="center"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/placeholder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/lblcategoria" android:textSize="18sp"
             android:textStyle="bold" android:padding="0dp"
             android:textAlignment="center"/>
     <TextView
-            android:text="Precio sin IVA"
+            android:text="@string/txtpsiniva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView8" android:textSize="18sp"
             android:padding="0dp" android:textAlignment="center"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/placeholder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/lblprecionormal" android:textSize="18sp"
             android:textStyle="bold" android:padding="0dp"
             android:textAlignment="center"/>
     <TextView
-            android:text="Precio con IVA"
+            android:text="@string/txtpiva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:textSize="18sp"
             android:padding="0dp" android:textAlignment="center"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/placeholder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/lblIva"
             android:textSize="18sp" android:textStyle="bold" android:padding="0dp" android:textAlignment="center"/>
     <TextView
-            android:text="Precio en Dolar"
+            android:text="@string/txtpdolar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView3"
             android:textSize="18sp" android:padding="0dp" android:textAlignment="center"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/placeholder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/lblDolar"
             android:textSize="18sp" android:textStyle="bold" android:padding="0dp" android:textAlignment="center"/>
