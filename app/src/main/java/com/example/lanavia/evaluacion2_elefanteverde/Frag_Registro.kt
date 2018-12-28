@@ -13,7 +13,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class frag_registro : Fragment() {
+class Frag_Registro : Fragment() {
 
     var miContexto: Context? = null
     var customSQL = null

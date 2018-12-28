@@ -9,7 +9,7 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:gravity="center">
+            android:layout_height="match_parent" android:gravity="center" android:layout_margin="10dp">
         <TextView
                 android:text="Registra tu producto"
                 android:layout_width="match_parent"
@@ -19,31 +19,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/editNombre" android:inputType="number" android:hint="@string/titleNombre"/>
+                android:id="@+id/editNombre" android:hint="@string/txtnombre" android:inputType="text"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/editCantidad" android:hint="cantidad" android:inputType="number"/>
+                android:id="@+id/editCantidad" android:hint="@string/txtcantidad" android:inputType="number"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/editCategoria" android:hint="categoria" android:inputType="number"/>
+                android:id="@+id/editCategoria" android:hint="@string/txtcategoria" android:inputType="text"/>
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editPrecioNormal" android:hint="precionormal"/>
-        <TextView
-                android:text="Precio en Dolar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/lblDolar" android:textSize="18sp"/>
-        <TextView
-                android:text="Precio con IVA "
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/lblIva" android:textSize="18sp"/>
+                android:id="@+id/editPrecioNormal" android:hint="@string/txtprecio" android:inputType="number"/>
         <Button
                 android:text="Guardar producto"
                 android:layout_width="wrap_content"

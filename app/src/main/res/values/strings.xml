@@ -4,6 +4,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btnlistar">Listar</string>
     <string name="btnagregar">Agregar</string>
+    <string name="txtnombre">Ingresa nombre del producto</string>
+    <string name="txtcategoria">Ingresa la categoría</string>
+    <string name="txtcantidad">Ingresa el stock</string>
+    <string name="txtprecio">Ingresa el precio sin IVA</string>
+
+
+
+
+
+
     <string name="txttituloapp">App de mantención de productos</string>
     <string name="txtusuario">Hola! Qué necesitas? Elige una opción:</string>
     <string name="titleNombre">Nombre del producto</string>

@@ -18,19 +18,17 @@ class MainActivity : AppCompatActivity() {
             val ft = fm.beginTransaction()
             val listProductsFragment = ListProductsFragment()
             listProductsFragment.miContexto = this
-            ft.replace(R.id.lyFrag,ListProductsFragment())
+            ft.replace(R.id.lyFragReplace,ListProductsFragment())
             ft.commit()
         }
 
         btnAddProduct.setOnClickListener{
             val fm = supportFragmentManager
             val ft = fm.beginTransaction()
-            val registroFragmento = frag_registro()
+            val registroFragmento = Frag_Registro()
             registroFragmento.miContexto = this
-            ft.replace(R.id.lyFrag,frag_registro())
+            ft.replace(R.id.lyFragReplace,Frag_Registro())
             ft.commit()
         }
-
-
     }
 }
