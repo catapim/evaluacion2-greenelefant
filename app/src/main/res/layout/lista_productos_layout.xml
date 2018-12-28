@@ -19,7 +19,7 @@
     <TextView
             android:text="TextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/lblstock" android:textSize="18sp"
+            android:layout_height="wrap_content" android:id="@+id/lblcantidad" android:textSize="18sp"
             android:textStyle="bold"/>
     <TextView
             android:text="Categoría"
@@ -28,7 +28,7 @@
     <TextView
             android:text="TextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/lblcategory" android:textSize="18sp"
+            android:layout_height="wrap_content" android:id="@+id/lblcategoria" android:textSize="18sp"
             android:textStyle="bold"/>
     <TextView
             android:text="Precio normal"
@@ -37,6 +37,6 @@
     <TextView
             android:text="TextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/lblnormalprice" android:textSize="18sp"
+            android:layout_height="wrap_content" android:id="@+id/lblprecionormal" android:textSize="18sp"
             android:textStyle="bold"/>
 </LinearLayout>

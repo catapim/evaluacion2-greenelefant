@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         btnListProduct.setOnClickListener {
             val fm = supportFragmentManager
             val ft = fm.beginTransaction()
-                //  val listProductsFragment = ListProductsFragment()
-          //  listProductsFragment.miContexto = this
-             //       ft.replace(R.id.lyFrag,ListProductsFragment())
+            val listProductsFragment = ListProductsFragment()
+            listProductsFragment.miContexto = this
+            ft.replace(R.id.lyFrag,ListProductsFragment())
             ft.commit()
         }
 
