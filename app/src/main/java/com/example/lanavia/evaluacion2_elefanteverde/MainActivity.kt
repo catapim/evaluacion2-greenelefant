@@ -1,7 +1,7 @@
 package com.example.lanavia.evaluacion2_elefanteverde
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         btnAddProduct.setOnClickListener{
             val fm = supportFragmentManager
             val ft = fm.beginTransaction()
-            val registroFragmento = Frag_Registro()
+            val registroFragmento = Fragmento_Registro()
             registroFragmento.miContexto = this
-            ft.replace(R.id.lyFragReplace,Frag_Registro())
+            ft.replace(R.id.lyFragReplace,Fragmento_Registro())
             ft.commit()
         }
     }

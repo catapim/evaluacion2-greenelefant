@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.TextView
 
@@ -31,7 +32,6 @@ class ListProductsFragment : Fragment() {
         val listaProductosArray: ArrayList<Producto> = customSQL.getProductos()
         var adaptador = CustomAdapter(miContexto!!,R.layout.lista_productos_layout,listaProductosArray)
         lvProductos.adapter=adaptador
-
         return v
     }
 }
@@ -44,6 +44,7 @@ class CustomAdapter(var miContexto : Context,
 
 
         var v : View = LayoutInflater.from(miContexto).inflate(recurso, null)
+        var fondoLayOutItems = v.findViewById<LinearLayout>(R.id.layListaProductos)
 
         var nombre: TextView = v.findViewById(R.id.lblnombre)
         var cantidad: TextView = v.findViewById(R.id.lblcantidad)
@@ -55,8 +56,15 @@ class CustomAdapter(var miContexto : Context,
         precionormal.text = listaProductosArray[position].precio.toString()
         categoria.text = listaProductosArray[position].categoria
 
+        var stock = cantidad.text.toString().toInt()
+
+        if (stock < 5) {
+            fondoLayOutItems.setBackgroundColor(miContexto.resources.getColor(R.color.red))
+        }   else if (stock in 6..19) {
+            fondoLayOutItems.setBackgroundColor(miContexto.resources.getColor(R.color.yellow))
+        }else {
+            fondoLayOutItems.setBackgroundColor(miContexto.resources.getColor(R.color.green))
+        }
         return v
     }
 }
-
-

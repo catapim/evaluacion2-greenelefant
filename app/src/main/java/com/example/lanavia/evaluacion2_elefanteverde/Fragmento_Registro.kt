@@ -6,14 +6,16 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class Frag_Registro : Fragment() {
+class Fragmento_Registro : Fragment() {
 
     var miContexto: Context? = null
     var customSQL = null
