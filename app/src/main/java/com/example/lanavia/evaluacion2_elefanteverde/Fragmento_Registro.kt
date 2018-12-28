@@ -15,13 +15,12 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class Fragmento_Registro : Fragment() {
+class Fragmento_Registro (var valorDolar: Double) : Fragment() {
 
     var miContexto: Context? = null
     var customSQL = null
 
-
-    override fun onCreateView(
+        override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
         ): View? {
@@ -34,19 +33,26 @@ class Fragmento_Registro : Fragment() {
 
         var btnSave = v.findViewById<Button>(R.id.btnGuardar)
 
-        btnSave.setOnClickListener{
+       btnSave.setOnClickListener{
 
             var nombre = v.findViewById<EditText>(R.id.editNombre).text.toString()
             var cantidad = v.findViewById<EditText>(R.id.editCantidad).text.toString()
             var categoria = v.findViewById<EditText>(R.id.editCategoria).text.toString()
             var precionormal = v.findViewById<EditText>(R.id.editPrecioNormal).text.toString()
+           try {
+               var precioIVA = Math.rint((precionormal.toInt() * 1.19))
+               var precioUSD = Math.rint((precionormal.toInt() / valorDolar))
 
-            if (nombre.length == 0 || cantidad.length == 0 || categoria.length == 0 || precionormal.length == 0 ) {
-                Toast.makeText(miContexto,"Plz que no quede ningun campo en blanco", Toast.LENGTH_LONG).show()
-            } else
-            {
-                customSQL.insertar(nombre,cantidad,categoria,precionormal.toInt(),null)
-            }
+               if (nombre.length == 0 || cantidad.length == 0 || categoria.length == 0 || precionormal.length == 0) {
+
+                   Toast.makeText(miContexto, "Plz que no quede ningun campo en blanco", Toast.LENGTH_LONG).show()
+               } else {
+                   customSQL.insertar(nombre, cantidad, categoria, precionormal.toInt(), precioIVA, precioUSD)
+               }
+           } catch (e: Exception) {
+               Toast.makeText(miContexto, "Plz que no quede ningun campo en blanco", Toast.LENGTH_LONG).show()
+               e.printStackTrace();
+           }
 
         }
         return v

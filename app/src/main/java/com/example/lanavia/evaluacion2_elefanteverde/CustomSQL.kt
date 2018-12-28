@@ -13,14 +13,14 @@ class CustomSQL (val miContexto: Context,
                  var version : Int) : SQLiteOpenHelper(miContexto, nombreDb,factory,version) {
 
     override fun onCreate(db: SQLiteDatabase?) {
-        var query = "CREATE TABLE ProductosSuper(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, cantidad TEXT, categoria TEXT, precio INTEGER, precioUSD DOUBLE)"
+        var query = "CREATE TABLE ProductosSuper(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, cantidad TEXT, categoria TEXT, precio INTEGER, precioIva DOUBLE, precioUSD DOUBLE)"
         db?.execSQL(query)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
     }
 
-    fun insertar (nombre: String, cantidad:String, categoria: String, precio: Int, precioUSD: Double?) {
+    fun insertar (nombre: String, cantidad:String, categoria: String, precio: Int, precioIVA : Double, precioUSD: Double?) {
         try {
             val db = this.writableDatabase
             var cv = ContentValues()
@@ -28,6 +28,7 @@ class CustomSQL (val miContexto: Context,
             cv.put("cantidad", cantidad)
             cv.put("categoria", categoria)
             cv.put("precio", precio)
+            cv.put("precioIVA", precioIVA)
             cv.put("precioUSD", precioUSD)
             val resultado = db.insert("ProductosSuper", null, cv)
             db.close()
@@ -50,13 +51,14 @@ class CustomSQL (val miContexto: Context,
         val cursor = db.rawQuery(query, null)
         if (cursor.moveToFirst()) {
             do {
-                var id = cursor.getInt(0)
+               // var id = cursor.getInt(0)
                 var nombre= cursor.getString(1)
                 var cantidad = cursor.getInt(2)
                 var categoria = cursor.getString(3)
                 var precio = cursor.getInt(4)
-                var precioUSD = cursor.getDouble(5)
-                arrayProductos.add(Producto(id,nombre,cantidad,categoria,precio,precioUSD))
+                var precioIVA = cursor.getDouble(5)
+                var precioUSD = cursor.getDouble(6)
+                arrayProductos.add(Producto(nombre,cantidad,categoria,precio,precioIVA,precioUSD))
             } while (cursor.moveToNext())
         }
         return arrayProductos

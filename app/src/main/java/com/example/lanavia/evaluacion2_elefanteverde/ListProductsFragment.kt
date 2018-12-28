@@ -50,11 +50,18 @@ class CustomAdapter(var miContexto : Context,
         var cantidad: TextView = v.findViewById(R.id.lblcantidad)
         var categoria: TextView = v.findViewById(R.id.lblcategoria)
         var precionormal: TextView = v.findViewById(R.id.lblprecionormal)
+        var precioIVA : TextView = v.findViewById(R.id.lblIva)
+        var precioUSD : TextView = v.findViewById(R.id.lblDolar)
+
 
         nombre.text = listaProductosArray[position].nombre
         cantidad.text = listaProductosArray[position].cantidad.toString()
-        precionormal.text = listaProductosArray[position].precio.toString()
         categoria.text = listaProductosArray[position].categoria
+        precionormal.text = listaProductosArray[position].precio.toString()
+        precioIVA.text  = "$ " + listaProductosArray[position].precioIVA.toInt().toString() + " CLP"
+        precioUSD.text = "$ " + listaProductosArray[position].precioUSD.toInt().toString() + " USD"
+
+
 
         var stock = cantidad.text.toString().toInt()
 
