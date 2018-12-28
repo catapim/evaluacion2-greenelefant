@@ -22,10 +22,4 @@
             android:text="Producto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/lblNameProduct" android:padding="5dp"/>
-    <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            android:visibility="visible" android:layout_weight="1"/>
 </LinearLayout>

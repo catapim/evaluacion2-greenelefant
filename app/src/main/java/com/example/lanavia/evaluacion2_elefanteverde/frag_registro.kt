@@ -1,117 +1,47 @@
 package com.example.lanavia.evaluacion2_elefanteverde
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import kotlinx.android.synthetic.main.fragment_frag_registro.*
+import android.widget.*
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [frag_registro.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [frag_registro.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
+
 class frag_registro : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
 
-    var miContexto : Context? = null
+    var miContexto: Context? = null
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+        ): View? {
         // Inflate the layout for this fragment
-        val v : View = inflater.inflate(R.layout.fragment_frag_registro, container, false)
+        val v: View = inflater.inflate(R.layout.fragment_frag_registro, container, false)
 
+        miContexto = activity
 
-      //  var txtStock : Int = editStock.toString().toInt()
-        var txtCategoria : String = editCategoria.text.toString()
-        var txtNombre = editNombre.text.toString()
+        var customSQL = CustomSQL(this.miContexto!!, "ProductosSuper", null, 1)
 
-        btnGuardar.setOnClickListener{
-            var customSQL = CustomSQL(this.miContexto!!, "ProductosSuper", null,1)
-          //  customSQL.insertar(txtNombre,txtStock,txtCategoria)
+        var btnSave = v.findViewById<Button>(R.id.btnGuardar)
+
+        btnSave.setOnClickListener{
+
+            var nombre = v.findViewById<EditText>(R.id.editNombre).text.toString()
+            var precionormal : Int = 0
+            var categoria = v.findViewById<EditText>(R.id.editCategoria).text.toString()
+            var stock = v.findViewById<EditText>(R.id.editStock).toString()
+
+            customSQL.insertar(nombre,stock,precionormal,categoria)
         }
         return v
-
-    }
-
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
-
-/*    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
-    }*/
-
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
-    interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment frag_registro.
-         */
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            frag_registro().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
+
+

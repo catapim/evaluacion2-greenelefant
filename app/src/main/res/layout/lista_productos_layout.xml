@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:orientation="vertical" android:layout_margin="10dp">
+
+    <TextView
+            android:text="@string/titleNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView7"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lblnombre" android:textSize="18sp"
+            android:textStyle="bold"/>
+    <TextView
+            android:text="@string/titleStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lblstock" android:textSize="18sp"
+            android:textStyle="bold"/>
+    <TextView
+            android:text="Categoría"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView9"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lblcategory" android:textSize="18sp"
+            android:textStyle="bold"/>
+    <TextView
+            android:text="Precio normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView8"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/lblnormalprice" android:textSize="18sp"
+            android:textStyle="bold"/>
+</LinearLayout>
